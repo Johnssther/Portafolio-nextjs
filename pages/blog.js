@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import { posts } from "../data";
 
 const PostCard = ({ post }) => (
-    <div className="col-md-4">
+    <div className="col-md-4 mt-4">
         <div className="card">
             <div className="overflow">
                 <img src={post.imageURL} alt="" className="card-img-top" />
@@ -19,7 +19,7 @@ const PostCard = ({ post }) => (
 
 const Blog = () => {
     return (
-        <Layout title="Mi Blog" footer={false} dark>
+        <Layout title="Mi Blog" footer={true}>
             <div className="row">
                 {posts.map((post, i) => (
                     <PostCard post={post} key={i} />
